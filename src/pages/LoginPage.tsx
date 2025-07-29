@@ -1,6 +1,7 @@
 import React, { useState, FormEvent } from 'react';
 import Input from '../components/Input';
 import Button from '../components/Button';
+import logoImg from '../assets/IACG.png';
 
 interface LoginPageProps {
   onLogin: (user: string, pass: string) => void;
@@ -20,6 +21,9 @@ const LoginPage: React.FC<LoginPageProps> = ({ onLogin, error }) => {
     <div className="min-h-screen flex items-center justify-center bg-black p-4">
       <div className="w-full max-w-md mx-auto bg-gray-900 p-8 rounded-2xl shadow-2xl shadow-amber-500/20 border border-gray-800">
         <div className="text-center mb-8">
+          <div className="flex justify-center mb-4">
+            <img src={logoImg} alt="Game Portal Logo" className="w-24 h-24 object-contain" />
+          </div>
           <h1 className="text-4xl font-extrabold text-white tracking-wider">
             GAME<span className="text-amber-500">PORTAL</span>
           </h1>

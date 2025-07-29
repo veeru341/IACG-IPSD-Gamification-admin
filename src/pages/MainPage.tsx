@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { GameResult } from '../types';
 import { fetchGameResults } from '../api/gameApi';
 import Button from '../components/Button';
+import logoImg from '../assets/IACG.png';
 
 interface MainPageProps {
   onLogout: () => void;
@@ -37,9 +38,12 @@ const MainPage: React.FC<MainPageProps> = ({ onLogout }) => {
     <div className="min-h-screen bg-black text-gray-100">
       <header className="bg-gray-900/50 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-10">
         <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-white">
-            Game<span className="text-amber-500">Analytics</span>
-          </h1>
+          <div className="flex items-center space-x-3">
+            <img src={logoImg} alt="Game Portal Logo" className="w-8 h-8 object-contain" />
+            <h1 className="text-2xl font-bold text-white">
+              Game<span className="text-amber-500">Analytics</span>
+            </h1>
+          </div>
           <Button onClick={onLogout} variant="outline">
             Logout
           </Button>
