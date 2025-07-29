@@ -1,0 +1,5 @@
+{
+  "name": "Game Results Dashboard",
+  "description": "A simple application for displaying game results after a secure login, featuring a black and red theme for a modern, striking look.",
+  "requestFramePermissions": []
+}
